@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color: #ffff;
+    background: #41295a;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.card{
+    cursor: pointer;
+    margin: 50px;
+    border-radius: 3px;
+    perspective: 1000px;
+
+}
+
+.card--inner{
+    background-color: #ffff;
+    color: #41295a;
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card:hover .card--inner{
+    transform: rotateY(180deg);
+}
+.card--content{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+
+.card--content--back{
+    transform: rotateY(180deg);
+}
+
+
+
+    </style>
+</head>
+<body>
+   <h1>css-flip-card</h1> 
+   <div class="card">
+       <div class="card--inner">
+           <div class="card--content card--content--front">
+               <h2>front</h2>
+
+           </div>
+<div class="card--content card--content--back">
+    <h2>back</h2>
+</div>
+       </div>
+   </div>
+
+   
+</body>
+</html>
